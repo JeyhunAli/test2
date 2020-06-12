@@ -1,0 +1,18 @@
+
+
+to download jenkins go to  --->>>https://updates.jenkins-ci.org/download/war/
+click on permalink to the latest after download unzip it 
+go to exact location of the war file in your OS 
+then go to the termianl 
+java -jar jenkins.war  run this cmd on terminal or in cmd line  it will generate password 
+
+copy that pswd 
+got to to url 
+write localhost:8080 
+then enter the paswd 
+then then clcik on install suggestion plugins then create username pwd then start to use jenkins
+
+
+
+
+
