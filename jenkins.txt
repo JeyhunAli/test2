@@ -1,0 +1,33 @@
+
+
+to download jenkins go to  --->>>https://updates.jenkins-ci.org/download/war/
+click on permalink to the latest after download unzip it 
+go to exact location of the war file in your OS 
+then go to the termianl 
+java -jar jenkins.war  run this cmd on terminal or in cmd line  it will generate password 
+
+copy that pswd 
+got to to url 
+write localhost:8080 
+then enter the paswd 
+then then clcik on install suggestion plugins then create username pwd then start to use jenkins
+
+
+
+nother concept along with jenkins is ngrok.com 
+this something another amazing feature which is allow you as soon as you check in in the git repo jenkkins automatically built the triggers and execute
+yoour test cases no need to go again to jenkins and execute it 
+
+
+for that first need to sign up on ngrok.com 
+
+then its gonna provide with one token 
+and port 
+add then via terminal or in cmd 
+then go to your github project directory add link then good to go 
+
+
+jenkins pipeline blue ocean 
+its all about CI CD  CONTINUES INTEGRATION AND CONTINUES DELIVERY
+
+
