@@ -1,5 +1,7 @@
 this is the file number 14
 
-in this file after pushing to master branch need to raise pr process
 
-this is just practice purpose 
+manual testing with jira bugzilla ----->>> 10(1,3,5)-2
+automation java selenium framework  ---->>> 30(2,4,6,bazar)3
+structure querry language ----- 10(1,3,5)-2
+Api Postman ----->> 10 (1,3,5)-2
