@@ -25,6 +25,9 @@ and port
 add then via terminal or in cmd
 then go to your github project directory add link then good to go
 
+its mandatory to add all the important plugins in order to execute all the test cases throughout jenkins
+if you want to create pipeline the most famous and with full feature one is blue ocean pipeline concept
+
 
 java -jar jenkins.war  after downloading jenkins go to directory in the terminal then run this command
 
