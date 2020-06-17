@@ -27,8 +27,11 @@ then go to your github project directory add link then good to go
 
 its mandatory to add all the important plugins in order to execute all the test cases throughout jenkins
 if you want to create pipeline the most famous and with full feature one is blue ocean pipeline concept
-
+  
+when you are executing all your test cases make sure the reporting tool configuration is done correctly 
+either its extent report or allure report 
 
 java -jar jenkins.war  after downloading jenkins go to directory in the terminal then run this command
+
 
 
