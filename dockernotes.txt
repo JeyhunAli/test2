@@ -61,6 +61,8 @@ and you didn't shut is down after one day or something like that it will stop wo
 to make it up and run again no need to delete container and run command again simple change the name of the given container name thats it after that it will be again up-and-run on browser 
 ****************************************************************************
 
+
+
 after creating container i have to link it with image 
 image is there container is there to link them i m going to run 
 
@@ -108,6 +110,26 @@ port number can be find in your terminal  just run docker ps -a  then you will s
 for example  localhost:32748
 
 you can rename your vnc viewer as well and after executing your test cases open the vnc viewer you will see all the actions over there 
+
+
+
+another concept in grid we can create n number of the container on top of the image its all manually 
+
+so after all lets say i want to disable any container for that we dont use disable method we use docker kill
+
+docker kill and here docker id for example
+ <<<<<<<<<<<<<    docker kill b0aea92ebe47 >>>>>>>>>>>>
+this command will kill it and it will exited 
+but it will be still visible in terminal to delete it completaly run 
+<<<<< docker rm b0aea92ebe47 >>>>>   it will remove from terminal 
+
+another thing you cannot right away remove the running container first you have to kill it then remove 
+
+docker system prune -a  ------>>> to remove all the images and containers all together 
+
+if you want remove specific images after killing you can remove it 
+by 
+docker rmi image id 
 
 
 
