@@ -1,0 +1,137 @@
+Docker note
+  docker is engine container 
+
+before the docker it was one hypervisor on top of that they use to download software 
+hypervisor is used to create virtual machines  example for that vm ware, Cisco 
+so people is used download all the software on it then they used to use them 
+
+but now docker is available we can download it in our OS it open source came to the market in 
+
+in order to use docker we have to pull some images then create the container on top of it 
+
+and every images and containers they are totally isolated from each other and each of them using OS ram and how they are using ram is 
+perfect so they are not taking unnecessarily ram for that reason docker is perfect
+
+for that we are gonna use RWC --->> stands for remote webdirver concept 
+
+this rwc have ip port number on the hub so when we trigger the commands it will communicate with our test script then it will send request 
+based on how we configured in our xml file which test will run on which browser 
+so based on that it images and containers will contribute and execute our test cases 
+
+to download the docker go to doceker.com download it 
+for mac its easy for windows you have to download docker toolbox also 
+
+after installation to verify if its correctly installed   ---->>>  docker run hello-world 
+or docker -v   
+
+docker images 
+docker ps -a  --->> to check how many containers 
+ docker system prune -a  to delete all the containers and images 
+ 
+signUp on docker hub then search all the images  they come with command line run command just simple copy specific of them then run on your terminal
+
+for testing purpose what i need first 
+
+selenium/hub   ---> then copy cmd 
+this cmd will pull all the necessary image from hub but this is not gonna create container it will just create image 
+
+selenium/node-chrome-debug ----->>> copy cmd then paste it in terminal 
+
+selenium/node-firefox-debug ----->>> copy cmd then paste it in terminal 
+
+all the cmd will be given in website 
+
+so after pulling images you have to create container to start ---->> on top of each images for that there are special run command 
+pay close attention here 
+
+docker run -d -p 4444:4444 --name selenium-hub -P selenium/hub   ---->> this is the cmd for creating container for selenium hub 
+-d means run on the background and show me the logs,
+ -p means which port
+   4444:4444 is the port number where it will run,
+ --name means whatever name you want to give to your container,
+ -P capital P here means exactly which image 
+
+after creating container quickly if you want to check if its created or not 
+run this cmd   docker run ps -a  
+
+
+*******************************************************************************
+another tip for u so lets say your docker already running on the browser level 
+and you didn't shut is down after one day or something like that it will stop working 
+to make it up and run again no need to delete container and run command again simple change the name of the given container name thats it after that it will be again up-and-run on browser 
+****************************************************************************
+
+after creating container i have to link it with image 
+image is there container is there to link them i m going to run 
+
+ *****  docker -d -P --link selenium-hub1:hub selenium/node-chrome-debug ******
+this cmd will connect them 
+here -d run on back ground and give me the logs -P is the image with the given name link is to link them hub is in the hub level means cloud level 
+
+after that it will create connection then go to your browser update it click on console then you will be able to see web-driver over there 
+  
+if you want to create one more container then run this command once again 
+ *****  docker -d -P --link selenium-hub1:hub selenium/node-chrome-debug ******
+
+then refresh your browser it will be another browser 
+
+after that if it says on your requirements add fire fox driver then go again docker hub web site 
+search for    <<<<<<<<<<  selenium/node-firefox-debug  >>>>>>
+then copy the given command 
+paste it on your browser then link it with image 
+
+then refresh your browser it will be Firefox driver over there up and running
+
+
+so how to run test cases on hub on grid 
+for that you going to your eclipse going to base page adding desired capabilities to your base page 
+then good to go 
+
+so after that you can run your test cases through testng.xml file also from terminal and Jenkins 
+
+in terminal just type mvn clean install press enter 
+
+docker logs + container id ------>> it will print all the logs for you 
+
+docker logs + container id which you execute your test cases it will provide you with all the important logs 
+but it s not gonna provide you with all the test execution logs for that we have to download vnc viewer 
+
+the purpose of the vnc viewer to see all the logs what happening while executing my test cases 
+because on the remote machine its running on the hub with linux and its not visible 
+for that reason need to download vnc viewer   
+
+
+after downloading how to use for that signUp in website 
+open the vnc viewer app   type localhost:here the port number  
+port number can be find in your terminal  just run docker ps -a  then you will see the containers in which container you are running your test copy that browser port number paste it here 
+
+for example  localhost:32748
+
+you can rename your vnc viewer as well and after executing your test cases open the vnc viewer you will see all the actions over there 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
