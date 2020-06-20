@@ -133,6 +133,118 @@ docker rmi image id
 
 
 
+**********************************************************************************************************************************************
+
+                                                                  DOCKER COMPOSER CONCEPT
+
+
+its providin us with yml file  
+so yml file says you have to write some information some logic inside the file then that file will do everything instead of you
+yml file will download all the important images and containers then it will link them together then its ready to execute your test cses 
+
+for that first check docker-compose version   
+
+then create one yml file under your docker folder then add special information the information u add should cover to install selenium hub
+chrome and firefox debug concept and to link them each other this information it can be find in docker hub offical website 
+
+to work with docker compose after cheking version 
+then go to the directory of created compose file make sure u are in that directory just run pwd command you will make sure 
+then simple run docker-compose up 
+
+it looks like this example 
+
+version: "3"
+services:
+  selenium-hub:
+    image: selenium/hub:3.141.59-yttrium
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+
+  chrome:
+    image: selenium/node-chrome:3.141.59-yttrium
+    deploy:
+      replicas: 5
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+  firefox:
+    image: selenium/node-firefox:3.141.59-yttrium
+    deploy:
+      replicas: 5
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+
+TIPS
+Docker compose is the 
+: tool for defining & running multi-container docker applications
+: use yaml files to configure application services (docker-compose.yml)
+: can start all services with a single command : docker compose up
+: can stop all services with a single command : docker compose down
+: can scale up selected services when required
+
+
+
+after creating this file in your OS then go to that directory run this command 
+docker-compose config  this cmd will check validity of your file 
+
+after that run docker-compose up   it means set up my infrustructor it will download all the necessary files and confuguration
+
+this command automatically will install first selenium hub then chrome node then firefox node and it will  link them 
+if you want to add opera browser also you can add information about in you yml file then up and run it one more time
+
+after that make your remote flag true in prop file 
+then run your test cases 
+mvn clean instal   ------>>>>> run this cmd 
+
+after that if you want to shut down your server its very simple 
+
+press control+c  
+
+
+another concept in docker-compose  usually while starting this cmd 
+we do docker-compose up -d  
+means start my docker quick -d means run logs in the background its fast and quick process 
+
+and if you want to shut down just run 
+docker-compose down
+docker -compose ps  --->>> how many container are running 
+
+another important concept lets say in your requirements you have to run your test cases in 3 chrome and 3 firefox browser 
+
+for that no need to make some changes in your .yml file u just go your terminal run 
+docker-compose up -d starting docker compose 
+docker-compose scale chrome=3   it means total chrome browser will be 3 
+for other browser same way 
+this is the power of docker with compose 
+earlier there were not this chance to have it people to run parallael with diffrent browsers they had to have another OS 
+
+now time to shut down server and start new tool    run                 <<<<<<<<< docker-compose down >>>>>>>>>>>>
+still there images are running   run   <<<< docker immages >>>>>   then <<<<<  docker system prune -a >>>>
+its gonna ask you are sure    type  y  then enter it will shutdown now system fresh again 
+
+
+###############################################################################################################################################################
+
+
+
+                                             ZALENIUM DOCKER   
+
+zalenium is another docker grid container name is zalenium its just wrapper on top of selenium grid infrustructor 
+its open source provided by zalando company 
+
+ 
 
 
 
@@ -140,6 +252,52 @@ docker rmi image id
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
