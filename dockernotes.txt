@@ -1,4 +1,4 @@
-Docker note
+iDocker note
   docker is engine container 
 
 before the docker it was one hypervisor on top of that they use to download software 
@@ -243,6 +243,12 @@ its gonna ask you are sure    type  y  then enter it will shutdown now system fr
 
 zalenium is another docker grid container name is zalenium its just wrapper on top of selenium grid infrustructor 
 its open source provided by zalando company 
+
+
+
+**************************<<<<<<<Happy learning>>>>>>*********************
+
+
 
  
 
