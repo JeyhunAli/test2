@@ -1,7 +1,9 @@
 this is the file number 14
 
 
-manual testing with jira bugzilla ----->>> 10(1,3,5)-2
+manual testing with jira bugzilla and Alm ----->>> 10(1,3,5)-2
+cucumber 
+java algoritms 
 automation java selenium framework  ---->>> 30(2,4,6,bazar)3
 structure query language ----- 10(1,3,5)-2
 Api Postman ----->> 10 (1,3,5)-2
