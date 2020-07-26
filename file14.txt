@@ -1,4 +1,4 @@
-this is the file number 14
+ this is the file number 14
 
 
 manual testing with jira bugzilla and Alm ----->>> 10(1,3,5)-2
@@ -22,6 +22,9 @@ i don't know  how correct is my question but i want to ask
 lets say i have 20 test cases if I'm executing them from testng.xml file separately they work perfectly fine but in blue ocean pipeline some 
 error occurs 
 how to handle this ? 
+
+
+
 
 
 
