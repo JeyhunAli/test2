@@ -14,6 +14,7 @@ then then clcik on install suggestion plugins then create username pwd then star
 
 
 
+
 nother concept along with jenkins is ngrok.com 
 this something another amazing feature which is allow you as soon as you check in in the git repo jenkkins automatically built the triggers and execute
 yoour test cases no need to go again to jenkins and execute it 
